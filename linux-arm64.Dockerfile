@@ -7,3 +7,4 @@ RUN curl -fsSL "https://github.com/kiranshila/Doplarr/releases/download/v${VERSI
     chmod -R u=rwX,go=rX "${APP_DIR}"
 
 COPY root/ /
+RUN chmod -R +x /etc/cont-init.d/
