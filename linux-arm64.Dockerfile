@@ -1,4 +1,7 @@
-FROM cr.hotio.dev/hotio/base@sha256:32f7802fe9903727645618677d0109a2da34a6d2efbc494f3afae50fdb7b2dd2
+ARG UPSTREAM_IMAGE
+ARG UPSTREAM_DIGEST_ARM64
+
+FROM ${UPSTREAM_IMAGE}@${UPSTREAM_DIGEST_ARM64}
 
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community openjdk16-jre-headless
 
