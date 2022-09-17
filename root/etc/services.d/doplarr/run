@@ -3,5 +3,4 @@
 
 umask "${UMASK}"
 
-# shellcheck disable=SC2086
-exec s6-setuidgid hotio java -jar "${APP_DIR}/doplarr.jar" ${ARGS}
+exec s6-setuidgid hotio java -jar "${APP_DIR}/doplarr.jar" -Dconfig="${CONFIG_DIR}/config.edn"
