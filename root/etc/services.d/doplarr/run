@@ -3,4 +3,6 @@
 
 umask "${UMASK}"
 
-exec s6-setuidgid hotio java -jar "${APP_DIR}/doplarr.jar" -Dconfig="${CONFIG_DIR}/config.edn"
+config="${CONFIG_DIR}/config.edn" && export config
+
+exec s6-setuidgid hotio java -jar "${APP_DIR}/doplarr.jar"
