@@ -1,7 +1,7 @@
 {
   "description": "Releases",
-  "version": "3.6.0",
-  "changelog": "https://github.com/kiranshila/Doplarr/compare/v3.5.0...v3.6.0",
+  "version": "3.5.0",
+  "changelog": "https://github.com/kiranshila/Doplarr/compare/v3.6.0...v3.5.0",
   "upstream_image": "cr.hotio.dev/hotio/base",
   "upstream_tag": "alpine",
   "upstream_digest_amd64": "sha256:9734281959632fe39c34eae1688bd71bfe536737ddb8e38b9384338aff4c2a26",
