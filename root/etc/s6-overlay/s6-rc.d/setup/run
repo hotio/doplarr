@@ -30,3 +30,8 @@ fi
 echo "Applying permissions to ${CONFIG_DIR}"
 chmod "=rwx" "${CONFIG_DIR}"
 chown hotio:hotio "${CONFIG_DIR}"
+
+if [[ ! -f "${CONFIG_DIR}/config.edn" ]]; then
+    cp "${APP_DIR}/config.edn" "${CONFIG_DIR}/config.edn"
+    chown hotio:hotio "${CONFIG_DIR}/config.edn"
+fi
