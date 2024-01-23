@@ -3,8 +3,6 @@ ARG UPSTREAM_DIGEST_ARM64
 
 FROM ${UPSTREAM_IMAGE}@${UPSTREAM_DIGEST_ARM64}
 
-VOLUME ["${CONFIG_DIR}"]
-
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community openjdk16-jre-headless
 
 ARG VERSION
