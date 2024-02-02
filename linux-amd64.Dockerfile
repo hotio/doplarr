@@ -2,6 +2,8 @@ ARG UPSTREAM_IMAGE
 ARG UPSTREAM_DIGEST_AMD64
 
 FROM ${UPSTREAM_IMAGE}@${UPSTREAM_DIGEST_AMD64}
+ARG IMAGE_STATS
+ENV IMAGE_STATS=${IMAGE_STATS}
 
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community openjdk16-jre-headless
 
