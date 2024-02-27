@@ -2,13 +2,13 @@
   "release": {
     "description": "Releases",
     "hide": false,
-    "last_updated": "2024-02-27T13:48:55.000Z",
-    "last_updated_url": "https://github.com/hotio/doplarr/actions/runs/8065660135",
+    "last_updated": "2024-02-27T22:31:24.000Z",
+    "last_updated_url": "https://github.com/hotio/doplarr/actions/runs/8072101292",
     "latest": true,
     "tags": [
       "release",
       "release-3.6.3",
-      "release-497c089"
+      "release-b223821"
     ]
   }
 }
