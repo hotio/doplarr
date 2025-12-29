@@ -13,3 +13,4 @@ RUN curl -fsSL "https://github.com/kiranshila/Doplarr/releases/download/v${VERSI
     chmod -R u=rwX,go=rX "${APP_DIR}"
 
 COPY root/ /
+RUN find /etc/s6-overlay/s6-rc.d -name "run*" -execdir chmod +x {} +
