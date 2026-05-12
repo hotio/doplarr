@@ -1,9 +1,9 @@
 {
   "description": "Releases",
   "latest": true,
-  "packages_hash": "fa41513797a88a7e2189ada55ff54fa05e46630e",
+  "packages_hash": "c42dee348f0c5e194447262cfafdd3db6f00c906",
   "upstream_image": "ghcr.io/hotio/base",
   "upstream_tag": "alpinevpn",
-  "upstream_tag_sha": "alpinevpn-e6491e4",
+  "upstream_tag_sha": "alpinevpn-7984fff",
   "version": "3.7.0"
 }
