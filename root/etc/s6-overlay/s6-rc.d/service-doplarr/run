@@ -3,6 +3,10 @@
 
 umask "${UMASK}"
 
-config="${CONFIG_DIR}/config.edn" && export config
-
-exec s6-setuidgid hotio java -jar "${APP_DIR}/doplarr.jar"
+if [[ -f "${CONFIG_DIR}/config.toml" ]]; then
+    cd "${CONFIG_DIR}" || exit 1
+    exec s6-setuidgid hotio "${APP_DIR}/doplarr"
+else
+    config="${CONFIG_DIR}/config.edn" && export config
+    exec s6-setuidgid hotio java -jar "${APP_DIR}/doplarr.jar"
+fi

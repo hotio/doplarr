@@ -10,9 +10,13 @@ ENV IMAGE_STATS=${IMAGE_STATS}
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community openjdk21-jre-headless
 
 ARG VERSION
-RUN curl -fsSL "https://github.com/kiranshila/Doplarr/releases/download/v${VERSION}/doplarr.jar" > "${APP_DIR}/doplarr.jar" && \
-    curl -fsSL "https://raw.githubusercontent.com/kiranshila/Doplarr/v${VERSION}/config.edn" > "${APP_DIR}/config.edn" && \
-    chmod -R u=rwX,go=rX "${APP_DIR}"
+ARG VERSIONRS
+RUN curl -fsSL "https://github.com/activexray/doplarr/releases/download/v${VERSION}/doplarr.jar" > "${APP_DIR}/doplarr.jar" && \
+    curl -fsSL "https://raw.githubusercontent.com/activexray/doplarr/refs/tags/v${VERSION}/config.edn" > "${APP_DIR}/config.edn" && \
+    curl -fsSL "https://github.com/activexray/doplarr_rs/releases/download/v${VERSIONRS}/doplarr-x86_64-unknown-linux-musl" > "${APP_DIR}/doplarr" && \
+    curl -fsSL "https://raw.githubusercontent.com/activexray/doplarr_rs/refs/tags/v${VERSIONRS}/config.example.toml" > "${APP_DIR}/config.toml" && \
+    chmod -R u=rwX,go=rX "${APP_DIR}" && \
+    chmod +x "${APP_DIR}/doplarr"
 
 COPY root/ /
 RUN find /etc/s6-overlay/s6-rc.d -name "run*" -execdir chmod +x {} +
