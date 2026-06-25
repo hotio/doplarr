@@ -2,5 +2,5 @@ java-cacerts=1.1-r0
 java-common=1.0-r1
 libtasn1=4.21.0-r0
 openjdk21-jre-headless=21.0.11_p10-r0
-p11-kit-trust=0.25.5-r2
-p11-kit=0.25.5-r2
+p11-kit-trust=0.26.2-r0
+p11-kit=0.26.2-r0
